@@ -1,0 +1,29 @@
+key "ddns-key" {
+	algorithm hmac-sha256;
+	secret "OBI0aFBZnA6kx8a7cGIlwS5y9wcvK2eM18FCsMAOv8I=";
+};
+
+zone "craig.lab" {
+	type primary;
+	file "/var/lib/bind/primary/db.craig.lab";
+//	allow-update {172.17.1.10; 127.0.0.1;};
+	update-policy {
+	  grant ddns-key zonesub ANY;
+	};
+};
+
+zone "17.172.in-addr.arpa" {
+	type primary;
+	file "/var/lib/bind/primary/db.172.17";
+	update-policy {
+	  grant ddns-key zonesub ANY;
+	};
+};
+
+zone "18.172.in-addr.arpa" {
+	type primary;
+	file "/var/lib/bind/primary/db.172.18";
+	update-policy {
+	  grant ddns-key zonesub ANY;
+	};
+};

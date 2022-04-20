@@ -1,0 +1,13 @@
+/var/log/bind/*.log {
+  compress
+  create 0644 bind bind
+  daily
+  dateext
+  missingok
+  notifempty
+  rotate 10
+  sharedscripts
+  postrotate
+    /usr/sbin/rndc reconfig > /dev/null 2>/dev/null || true
+  endscript
+}

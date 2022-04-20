@@ -1,0 +1,13 @@
+$ORIGIN .
+$TTL 900	; 15 minutes
+craig.lab		IN SOA	stork.craig.lab. root.craig.lab. (
+				14         ; serial
+				604800     ; refresh (1 week)
+				86400      ; retry (1 day)
+				2419200    ; expire (4 weeks)
+				604800     ; minimum (1 week)
+				)
+			NS	stork.craig.lab.
+$ORIGIN craig.lab.
+
+stork			A	172.17.1.10
