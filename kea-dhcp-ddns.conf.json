@@ -26,12 +26,20 @@
         },
         "reverse-ddns": {
             "ddns-domains": [{
-                "name": "17.172.in-addr.arpa.",
-                "key-name": "ddns-key",
-                "dns-servers": [{
-                    "ip-address": "127.0.0.1"
-                }]
-            }]
+                    "name": "17.172.in-addr.arpa.",
+                    "key-name": "ddns-key",
+                    "dns-servers": [{
+                        "ip-address": "127.0.0.1"
+                    }]
+                },
+                {
+                    "name": "18.172.in-addr.arpa.",
+                    "key-name": "ddns-key",
+                    "dns-servers": [{
+                        "ip-address": "127.0.0.1"
+                    }]
+                }
+            ]
         },
         "loggers": [{
             "name": "kea-dhcp-ddns",
